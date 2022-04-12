@@ -1,0 +1,39 @@
+{
+   
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "g++.exe - Build and debug active file",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}\\exe\\${fileBasenameNoExtension}.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "D:\\newsoftware\\MinGW\\mingw64\\bin\\gdb.exe",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "C/C++: g++.exe build active file"
+    }
+  ]
+}
+
+/*
+The program setting specifies the program you want to debug. 
+Here it is set to the active file folder ${fileDirname} and active filename with the .exe extension ${fileBasenameNoExtension}.exe, 
+which if helloworld.cpp is the active file will be helloworld.exe.
+
+By default, the C++ extension won't add any breakpoints to your source code and the stopAtEntry value is set to false.
+Change the stopAtEntry value to true to cause the debugger to stop on the main method when you start debugging.
+
+Note: The preLaunchTask setting is used to specify task to be executed before launch. 
+Make sure it is consistent with the tasks.json file label setting.
+*/

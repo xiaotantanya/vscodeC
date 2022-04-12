@@ -1,0 +1,35 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe build active file",
+			"command": "D:\\newsoftware\\MinGW\\mingw64\\bin\\g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\exe\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "编译器: D:\\newsoftware\\MinGW\\mingw64\\bin\\g++.exe"
+		}
+	],
+}
+/*
+You can modify your tasks.json to build multiple C++ files by using an argument like "${workspaceFolder}\\*.cpp" 
+instead of ${file}. This will build all .cpp files in your current folder. 
+
+You can also modify the output filename by replacing "${fileDirname}\\${fileBasenameNoExtension}.exe" 
+with a hard-coded filename (for example "${workspaceFolder}\\myProgram.exe").
+*/
